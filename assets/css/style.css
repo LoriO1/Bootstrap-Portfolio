@@ -57,8 +57,9 @@ h3 {
 /* header */
 
 #masthead {
-  position: fixed /*added*/0 0 0 0;
-  z-index: 99;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   margin: 0 0 /*increased from 30 to 50*/50px;
   overflow: auto;
@@ -128,7 +129,7 @@ h3, h2 {
   min-height: calc(100vh - 70px);
   /* added */
   margin-bottom: 3%;
-  margin-top: 0px;
+  margin-top: 8%;
 }
 
 .main-section {
@@ -145,6 +146,11 @@ h3, h2 {
 
 #interior {
   color: #4aaaa5;
+  text-decoration: none;
+}
+
+#interior:hover {
+  color: #cccccc;
   text-decoration: none;
 }
 
@@ -233,32 +239,46 @@ input[type=submit] {
 
 /* Bootstrp overrides */
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-  background-color: #ffffff;  /*trouble overriding the background color*/
+nav.navbar.navbar-expand-lg {
   margin-left: 0px;
   margin-top: 0px;
   padding: 0px;
 }
 
 div#navbarText.collapse.navbar-collapse  {
+  display: flex;
+  justify-content: flex-end;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  padding-left: 35%;
+  width: 100%;
   padding-right: 0px;
 }
 
-/*trouble formatting nav links below*/
-a.navlink {
+
+a.nav-link:hover {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  color: #dddddd;
+  color: #4aaaa5;
 }
 
 li.nav-item, li.nav-item.active, li.nav-item.link {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #777777;
   padding: 0px 5px 0px 5px;
-  border: 1px solid black;
 }
-/*trouble formatting nav links above*/
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #777777;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #4aaaa5;
+}
+
+#portfolio {
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .row {
   background: #ffffff;
@@ -282,8 +302,13 @@ div.col-md-12 {
 
 a#logo.navbar-brand {
   margin-left: 0px;
+  padding: 0px 15px 0px 15px;
 }
 
 #contentTitle {
   margin-bottom: 0px;
+}
+
+.mr-auto, .mx-auto {
+  margin-right: 0 !important;
 }
