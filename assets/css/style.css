@@ -160,7 +160,7 @@ h3, h2 {
   position: relative;
   float: left;
   width: 274px;
-  margin: 20px 0 25px;
+  margin: 20px /* added */40px 25px /* added */0px;
   overflow: auto;
 }
 
@@ -289,6 +289,13 @@ li.nav-item, li.nav-item.active, li.nav-item.link {
 }
 
 div.col-md-12 {
+  padding-bottom: 0px;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+div.col-md-10 {
   padding-bottom: 0px;
   padding-top: 3%;
   padding-left: 3%;

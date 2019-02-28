@@ -2,63 +2,91 @@
 <html lang="en-us">
 
 <head>
+  <!-- meta tags -->
   <meta charset="UTF-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Lori Orzechowski</title>
+
+  <!-- style sheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-
+  <!-- header/nav masthead bar -->
   <header id="masthead">
-    <div class="container">
-      <a href="index.html" id="logo">Lori Orzechowski</a>
-      <nav>
-        <a href="index.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div id="mastheadContainer" class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html" id="logo">Lori Orzechowski</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="portfolio" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>         
+          </div>
+        </nav>
     </div>
   </header>
 
+  <!-- main body and content -->
   <div id="main-container" class="container">
-    <section class="main-section">
-      <h1>Portfolio</h1>
-
-      <div class="work">
-        <img src="assets/images/technics-q-c-640-480-1.jpg" alt="Word Guess">
-
-        <h3>Word Guess</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="contentTitle">Portfolio</h1>
+          </div>
+        </div>
+        <div class="row">
+            <div id="aboutContent" class="col-md-10">
+            <div class="work">
+              <img src="assets/images/technics-q-c-640-480-1.jpg" alt="Word Guess">
+      
+              <a href="https://www.coolmathgames.com/0-hangman" target="blank" alt="hangman" id="links"><h3>Hangman</h3></a>
+            </div>
+            <div class="work">
+              <img src="assets/images/technics-q-c-640-480-2.jpg" alt="RPG Game">
+      
+              <a href="https://www.gamesradar.com/best-rpg-games/" target="blank" alt="rpg game" id="links"><h3>RPG Game</h3></a>
+            </div>
+            <div class="work">
+              <img src="assets/images/technics-q-c-640-480-5.jpg" alt="Trivia Game">
+      
+              <a href="https://www.tomsguide.com/us/pictures-story/649-best-trivia-game-apps.html" target="blank" alt="trivia game" id="links"><h3>Trivia Game</h3></a>
+            </div>
+            <div class="work">
+              <img src="assets/images/technics-q-c-640-480-7.jpg" alt="Rutgers Info Widget">
+      
+              <a href="http://www.alumni.rutgers.edu/s/896/2016/events.aspx?sid=896&gid=1&pgid=8127" target="blank" alt="rutgers info widget" id="links"><h3>Rutgers Info Widget</h3></a>
+            </div>
+            <div class="work">
+              <img src="assets/images/technics-q-c-640-480-9.jpg" alt="Rock Paper Scissors">
+      
+              <a href="https://rockpaperscissors.com/" target="blank" alt="rock paper scissors" id="links"><h3>Rock Paper Scissors</h3></a>
+            </div>          
+          </div>
+        </div>      
       </div>
-      <div class="work">
-        <img src="assets/images/technics-q-c-640-480-2.jpg" alt="RPG Game">
-
-        <h3>RPG Game</h3>
-      </div>
-      <div class="work">
-        <img src="assets/images/technics-q-c-640-480-5.jpg" alt="Trivia Game">
-
-        <h3>Trivia Game</h3>
-      </div>
-      <div class="work">
-        <img src="assets/images/technics-q-c-640-480-7.jpg" alt="Rutgers Info Widget">
-
-        <h3>Rutgers Info Widget</h3>
-      </div>
-      <div class="work">
-        <img src="assets/images/technics-q-c-640-480-9.jpg" alt="Rock Paper Scissors">
-
-        <h3>Rock Paper Scissors</h3>
-      </div>
-
-    </section>
-
+    </div>
   </div>
 
+  <!-- footer -->
   <footer>
-    <div class="container">
-      Copyright &copy;
-    </div>
-  </footer>
+      <div class="container">
+        Copyright &copy; 
+      </div>
+    </footer>
+  
 </body>
-
 </html>
