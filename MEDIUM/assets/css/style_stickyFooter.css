@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   /* temporary border to better see work in progress
-  border: 1px solid black; */
+  border: 1px solid black;*/ 
 }
 
 /* general */
@@ -104,36 +104,54 @@ nav a:first-child {
 
 /* sidebar */
 
-.sidebar {
-  float: right;
+#sidebar {
+  /*float: right;*/
   width: 100%;
-  max-width: 270px;
-  padding: 30px;
-  margin-bottom: 20px;
-  background: #fff;
-  border: 1px solid #dddddd;
+  /*max-width: 270px;*/
+  padding: /*added*/0px 15px /*added*/0px /*added*/30px;
+  /*margin-bottom: 10px;*/
+  /*background: #ffffff;*/
+  /*border: 1px solid #dddddd;*/
+}
+
+#sidebar-row {
+  /*added all*/ background-color: #ffffff;
+  padding: 0px 5px 0px 5px;
 }
 
 h3,
-.sidebar h2 {
-  padding-bottom: 20px;
+#sidebar h2 {
+  padding-bottom: /*reduced from 20px*/10px;
   margin-bottom: 15px;
   line-height: 22px;
   border-bottom: 2px solid #eee;
 }
 
+
 .social {
-  width: 60px;
-  height: 60px;
+  width: /*reduced from 62px*/40px;
+  height: /*reduced from 62px*/40px;
   margin-top: 8px;
   margin-right: 5px;
   /* added */
-  padding: 5px 5px 5px 5px;
+  padding: 0px 0px 0px 0px;
 }
 
-.social:last-child {
-  margin-right: 0;
+#connect {
+  /*added all*/padding: 0px 0px 0px 0px;
+  text-align: center;
 }
+
+#social {
+  /*added all*/padding-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*.social:last-child {
+  margin-right: 0;
+}*/
+
 
 /* main */
 
@@ -143,20 +161,30 @@ h3,
   min-height: calc(100vh - 70px);
   margin-bottom: 3%;
   margin-top: 8%;*/
-  /* added bc it seems to add space btwn main container and sidebar */
-  padding-right: 0px;
-  /* added bc it seems to push main container all the way left, aligning with logo */
-  padding-left: 0px;
+  /* added bc it seems to add space btwn main container and sidebar 
+  padding-right: 0px;*/
+  /* added bc it seems to push main container all the way left, aligning with logo*/ 
+  padding-left: 3px;
 }
 
 .main-section {
   float: left;
-  width: 100%;
-  max-width: 650px;
-  padding: 30px;
+  width: /*reduced from 100%*/100%;
+  max-width: /* increased from 650px*/960px;
+  padding: /*reduced from 30px*/0px /*added the rest*/0px 0px 12px;
   margin: 0 0 40px;
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  /*background: #ffffff;*/
+  /*border: 1px solid #dddddd;*/
+}
+
+/* added new id */
+#main-body {
+  margin-right: 0px;
+}
+
+/* added new id */
+#title-row {
+  background-color: #ffffff;
 }
 
 /* index page */
@@ -309,6 +337,8 @@ h3, h2 {
   margin-bottom: 15px;
   line-height: 22px;
   border-bottom: 2px solid #eeeeee;
+  /*added*/
+  padding-top: 20px;
 }
 
 /* sticky footer */
@@ -378,12 +408,15 @@ li.nav-item, li.nav-item.active, li.nav-item.link {
   padding-right: 15px;
 }
 
-.row {
+/*.row {
   background: #ffffff;
-}
+}*/
 
 #aboutContent {
   padding-bottom: 5%;
+  /* added */
+  background-color: #ffffff;
+  margin-bottom: 3%;
 }
 
 div.col-md-9 {
@@ -411,6 +444,7 @@ a#logo.navbar-brand {
 }
 
 #contentTitle {
+  margin-top: 35px;
   margin-bottom: 0px;
 }
 
