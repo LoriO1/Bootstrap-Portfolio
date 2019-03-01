@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   /* temporary border to better see work in progress
-  border: 1px solid black;*/ 
+  border: 1px solid black; */
 }
 
 /* general */
@@ -46,16 +46,12 @@ h1 {
   font-size: 30px;
   line-height: 49px;
   border-bottom: 3px solid #dddddd;
+  
 }
 
 h2,
 h3 {
   font-size: 22px;
-  /* added */
-  padding-bottom: 20px;
-  margin-bottom: 15px;
-  line-height: 22px;
-  border-bottom: 2px solid #eeeeee;
 }
 
 /* header */
@@ -64,7 +60,7 @@ h3 {
   position: fixed;
   z-index: /*increased from 99*/1000;
   width: 100%;
-  margin: 0 0 /*increased from 30*/50px;
+  margin: 0 0 30px;
   overflow: auto;
   color: #ffffff;
   background: #ffffff;
@@ -106,7 +102,6 @@ nav a:first-child {
   border-left: 0 none;
 }
 
-
 /* sidebar */
 
 .sidebar {
@@ -116,7 +111,7 @@ nav a:first-child {
   padding: 30px;
   margin-bottom: 20px;
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 
 h3,
@@ -128,10 +123,12 @@ h3,
 }
 
 .social {
-  width: 62px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   margin-top: 8px;
   margin-right: 5px;
+  /* added */
+  padding: 5px 5px 5px 5px;
 }
 
 .social:last-child {
@@ -142,6 +139,14 @@ h3,
 
 #main-container {
   padding-top: 130px;
+  /* added then removed
+  min-height: calc(100vh - 70px);
+  margin-bottom: 3%;
+  margin-top: 8%;*/
+  /* added bc it seems to add space btwn main container and sidebar */
+  padding-right: 0px;
+  /* added bc it seems to push main container all the way left, aligning with logo */
+  padding-left: 0px;
 }
 
 .main-section {
@@ -150,8 +155,62 @@ h3,
   max-width: 650px;
   padding: 30px;
   margin: 0 0 40px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+/* index page */
+
+#interior {
+  color: #4aaaa5;
+  text-decoration: none;
+}
+
+#interior:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+/* portfolio page */
+/* double check this section because it wasn't in the last css */
+.work {
+  position: relative;
+  float: left;
+  width: 274px;
+  margin: 20px /* added */40px 25px /* added */0px;
+  overflow: auto;
+}
+
+.work:nth-child(even) {
+  margin-right: 40px;
+}
+
+.work img {
+  width: 100%;
+  border: 0 none;
+  opacity: 0.8;
+}
+
+.work h3 {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: #4aaaa5;
+  border-bottom: 0;
+}
+
+.auth-image {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 25px;
 }
 
 /* contact page */
@@ -164,6 +223,8 @@ h3,
   margin-bottom: 10px;
 }
 
+
+
 label,
 input[type=text],
 input[type=email],
@@ -172,13 +233,19 @@ textarea {
   width: 100%;
 }
 
+  /* added */
+label {
+  margin: 12px 0px 0px 0px;
+}
+
+
 input[type=text],
 input[type=email],
 textarea {
   height: 35px;
-  padding: 0 10px;
+  padding: 0 /*increased from 0px*/10px;
   font-size: 14px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 
 textarea {
@@ -188,29 +255,41 @@ textarea {
 input[type=submit] {
   padding: 10px 30px;
   font-size: 18px;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
 }
 
-/* start hover styling */
+/* hover styling */
 
 #logo:hover,
 input[type=submit]:hover {
-  background: #5e7f7e;
+  background: /* #5e7f7e*/#ff8800;
+  /* added */
+  transition: background-color 0.8s ease-in;
 }
 
 nav a:hover {
-  color: #5e7f7e;
-}
+  color: /* #5e7f7e*/#4aaaa5;
+}*
 
 .social:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-
-/* end hover styling */
+  /* added */
+h1:hover {
+  color: /* #5e7f7e*/#ff8800;
+  /* added */
+  transition: color 0.8s ease-in;
+}
+  /* added */
+h2:hover {
+    color: /* #5e7f7e*/#ff8800;
+    /* added */
+    transition: color 0.8s ease-in;
+  }
 
 /* footer */
 
@@ -225,7 +304,14 @@ footer {
   border-top: 8px solid #4aaaa5;
 }
 
-/* sticky footer styling */
+h3, h2 {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 22px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+/* sticky footer */
 
 html,
 body {
@@ -244,4 +330,90 @@ footer,
   height: 105px;
 }
 
-/* end sticky footer styling */
+
+/* Bootstrap overrides */
+
+nav.navbar.navbar-expand-lg {
+  margin-left: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+div#navbarText.collapse.navbar-collapse  {
+  /*display: flex;
+  justify-content: flex-end;*/
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 100%;
+  padding-right: 0px;
+}
+
+.test {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.nav-link:hover {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #4aaaa5;
+}
+
+li.nav-item, li.nav-item.active, li.nav-item.link {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #777777;
+  padding: 0px 5px 0px 5px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #777777;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #4aaaa5;
+}
+
+#portfolio {
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  background: #ffffff;
+}
+
+#aboutContent {
+  padding-bottom: 5%;
+}
+
+div.col-md-9 {
+  padding-bottom: 0px;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+div.col-md-10 {
+  padding-bottom: 0px;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#mastheadContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+a#logo.navbar-brand {
+  margin-left: 0px;
+  padding: 0px 15px 0px 15px;
+}
+
+#contentTitle {
+  margin-bottom: 0px;
+}
+
+.mr-auto, .mx-auto {
+  margin-right: 0 !important;
+}
