@@ -4,13 +4,13 @@ body {
   line-height: 34px;
   color: #777777;
   background: url("../images/circles-light.png");
-  margin: 0;
 }
 
 * {
   box-sizing: border-box;
-  /* added temporarily to see work in progress better */
-  border: 1px solid black;
+  margin: 0;
+  /* temporary border to better see work in progress
+  border: 1px solid black;*/ 
 }
 
 /* general */
@@ -27,12 +27,15 @@ h2,
 h3,
 p {
   margin-bottom: 20px;
-
 }
 
-p:last-child {
+.indexParagraph, img {
+  padding-top: 30px;
+}
+
+/* p:last-child {
   margin-bottom: 0;
-}
+}*/
 
 h1,
 h2,
@@ -47,6 +50,7 @@ h1 {
   font-size: 30px;
   line-height: 49px;
   border-bottom: 3px solid #dddddd;
+  
 }
 
 h2,
@@ -58,19 +62,20 @@ h3 {
 
 #masthead {
   position: fixed;
-  top: 0;
-  z-index: 1000;
+  z-index: /*increased from 99*/1000;
   width: 100%;
-  margin: 0 0 /*increased from 30 to 50*/50px;
+  margin: 0 0 30px;
   overflow: auto;
   color: #ffffff;
   background: #ffffff;
   border-bottom: 2px solid #cccccc;
+  /*added*/
+  top: 0;
 }
 
 #logo {
   float: left;
-  width: 325px;
+  width: /*increased from 250px*/325px;
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -89,57 +94,101 @@ nav {
 
 nav a {
   display: inline-block;
-  padding-left: /*changed from 15 to 5*/5px;
-  margin-left: /*changed from 15 to 0*/0px;
-  line-height: 15px;
-  color: #999;
+  padding-left: /*changed from 15px*/5px;
+  margin-left: /*changed from 15px*/0px;
+  line-height: /* changed from 18px*/15px;
+  color: #cccccc;
   text-decoration: none;
-  border-left: 1px solid #efefef;
+  border-left: 1px solid #cccccc;
 }
 
 nav a:first-child {
   border-left: 0 none;
 }
 
-/* footer */
+/* sidebar */
 
-footer {
-  padding: 30px 0;
-  clear: both;
-  font-size: 12px;
-  color: #ffffff;
-  color: #cccccc;
-  text-align: center;
-  background: #666666;
-  border-top: 8px solid #4aaaa5;
-  height: 50px;
+#sidebar {
+  /*float: right;*/
+  width: 100%;
+  /*max-width: 270px;*/
+  padding: /*added*/0px 15px /*added*/0px /*added*/30px;
+  /*margin-bottom: 10px;*/
+  /*background: #ffffff;*/
+  /*border: 1px solid #dddddd;*/
 }
 
-h3, h2 {
-  padding-bottom: 20px;
+#sidebar-row {
+  /*added all*/ background-color: #ffffff;
+  padding: 0px 5px 0px 5px;
+}
+
+h3,
+#sidebar h2 {
+  padding-bottom: /*reduced from 20px*/10px;
   margin-bottom: 15px;
   line-height: 22px;
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid #eee;
 }
+
+
+.social {
+  width: /*reduced from 62px*/40px;
+  height: /*reduced from 62px*/40px;
+  margin-top: 8px;
+  margin-right: 5px;
+  /* added */
+  padding: 0px 0px 0px 0px;
+}
+
+#connect {
+  /*added all*/padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+#social {
+  /*added all*/padding-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*.social:last-child {
+  margin-right: 0;
+}*/
+
 
 /* main */
 
 #main-container {
-  /*padding-top: 130px;*/
+  padding-top: 130px;
+  /* added then removed
   min-height: calc(100vh - 70px);
-  /* added */
   margin-bottom: 3%;
-  margin-top: 8%;
+  margin-top: 8%;*/
+  /* seems to impact spacing btwn main container and sidebar 
+  padding-right: 0px;*/
+  /* added bc it seems to push main container all the way left, aligning with logo*/ 
+  padding-left: 3px;
 }
 
 .main-section {
   float: left;
-  width: 100%;
-  max-width: 960px;
-  padding: 30px;
+  width: /*reduced from 100%*/100%;
+  max-width: /* increased from 650px*/960px;
+  padding: /*reduced from 30px*/0px /*added the rest*/0px 0px 12px;
   margin: 0 0 40px;
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  /*background: #ffffff;*/
+  /*border: 1px solid #dddddd;*/
+}
+
+/* added new id */
+#main-body {
+  margin-right: 0px;
+}
+
+/* added new id */
+#title-row {
+  background-color: #ffffff;
 }
 
 /* index page */
@@ -160,12 +209,16 @@ h3, h2 {
   position: relative;
   float: left;
   width: 274px;
-  margin: 20px /* added */40px 25px /* added */0px;
+  margin: 20px /* added */40px /*reduced from 25px*/5px /* added */0px;
   overflow: auto;
 }
 
 .work:nth-child(even) {
-  margin-right: 40px;
+  /*added*/margin-right: 40px;
+}
+
+.work:last-child {
+  margin-bottom: 40px;
 }
 
 .work img {
@@ -214,11 +267,16 @@ textarea {
   width: 100%;
 }
 
+  /* added */
+label {
+  margin: 12px 0px 0px 0px;
+}
+
 input[type=text],
 input[type=email],
 textarea {
   height: 35px;
-  padding: 0 10px;
+  padding: 0 /*increased from 0px*/10px;
   font-size: 14px;
   border: 1px solid #dddddd;
 }
@@ -236,8 +294,78 @@ input[type=submit] {
   border: 0 none;
 }
 
+/* hover styling */
 
-/* Bootstrp overrides */
+#logo:hover,
+input[type=submit]:hover {
+  background: /* #5e7f7e*/#ff8800;
+  /* added */
+  transition: background-color 0.8s ease-in;
+}
+
+nav a:hover {
+  color: /* #5e7f7e*/#4aaaa5;
+}*
+
+.social:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+  /* added */
+h1:hover {
+  color: /* #5e7f7e*/#ff8800;
+  /* added */
+  transition: color 0.8s ease-in;
+}
+  /* added */
+h2:hover {
+    color: /* #5e7f7e*/#ff8800;
+    /* added */
+    transition: color 0.8s ease-in;
+  }
+
+/* footer */
+
+footer {
+  padding: 30px 0;
+  clear: both;
+  font-size: 12px;
+  color: #fff;
+  color: #ccc;
+  text-align: center;
+  background: #666;
+  border-top: 8px solid #4aaaa5;
+}
+
+h3, h2 {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 22px;
+  border-bottom: 2px solid #eeeeee;
+  /*added*/
+  padding-top: 20px;
+}
+
+/* sticky footer */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
+/* Bootstrap overrides */
 
 nav.navbar.navbar-expand-lg {
   margin-left: 0px;
@@ -245,9 +373,9 @@ nav.navbar.navbar-expand-lg {
   padding: 0px;
 }
 
-div#navbarText  {
-  /* display: flex;
-  justify-content: flex-end; */
+div#navbarText.collapse.navbar-collapse  {
+  /*display: flex;
+  justify-content: flex-end;*/
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   width: 100%;
   padding-right: 0px;
@@ -257,7 +385,6 @@ div#navbarText  {
   display: flex;
   justify-content: flex-end;
 }
-
 
 a.nav-link:hover {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -270,7 +397,7 @@ li.nav-item, li.nav-item.active, li.nav-item.link {
   padding: 0px 5px 0px 5px;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link:default {
   color: #777777;
 }
 
@@ -285,22 +412,25 @@ li.nav-item, li.nav-item.active, li.nav-item.link {
   padding-right: 15px;
 }
 
-.row {
+/*.row {
   background: #ffffff;
-}
+}*/
 
 #aboutContent {
   padding-bottom: 5%;
+  /* added */
+  background-color: #ffffff;
+  margin-bottom: 3%;
 }
 
-div.col {
+div.col-md-9 {
   padding-bottom: 0px;
   padding-top: 3%;
   padding-left: 3%;
   padding-right: 3%;
 }
 
-div.col {
+div.col-md-10 {
   padding-bottom: 0px;
   padding-top: 3%;
   padding-left: 3%;
@@ -318,6 +448,7 @@ a#logo.navbar-brand {
 }
 
 #contentTitle {
+  margin-top: 35px;
   margin-bottom: 0px;
 }
 
