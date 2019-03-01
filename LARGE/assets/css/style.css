@@ -9,8 +9,8 @@ body {
 
 * {
   box-sizing: border-box;
-  /* added temporarily to see work in progress better */
-  border: 1px solid black;
+  /* added temporarily to see work in progress better 
+  border: 1px solid black;*/
 }
 
 /* general */
@@ -245,17 +245,12 @@ nav.navbar.navbar-expand-lg {
   padding: 0px;
 }
 
-div#navbarText  {
-  /* display: flex;
-  justify-content: flex-end; */
+div#navbarText.collapse.navbar-collapse  {
+  display: flex;
+  justify-content: flex-end;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   width: 100%;
   padding-right: 0px;
-}
-
-.test {
-  display: flex;
-  justify-content: flex-end;
 }
 
 
@@ -293,14 +288,14 @@ li.nav-item, li.nav-item.active, li.nav-item.link {
   padding-bottom: 5%;
 }
 
-div.col {
+div.col-md-12 {
   padding-bottom: 0px;
   padding-top: 3%;
   padding-left: 3%;
   padding-right: 3%;
 }
 
-div.col {
+div.col-md-10 {
   padding-bottom: 0px;
   padding-top: 3%;
   padding-left: 3%;
