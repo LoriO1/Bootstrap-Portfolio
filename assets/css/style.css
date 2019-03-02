@@ -112,7 +112,7 @@ nav a:first-child {
   /*float: right;*/
   width: 100%;
   /*max-width: 270px;*/
-  padding: /*added*/0px 15px /*added*/0px /*added*/40px;
+  padding: /*added*/0px 15px /*added*/0px /*added*/30px;
   
   /*margin-bottom: 10px;*/
   /*background: #ffffff;*/
@@ -455,4 +455,10 @@ a#logo.navbar-brand {
 
 .mr-auto, .mx-auto {
   margin-right: 0 !important;
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    padding: 0px 15px 0px 10px;
+  }
 }
