@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   /* temporary border to better see work in progress
-  border: 1px solid black;*/ 
+  border: 1px solid black; */
 }
 
 /* general */
@@ -112,7 +112,8 @@ nav a:first-child {
   /*float: right;*/
   width: 100%;
   /*max-width: 270px;*/
-  padding: /*added*/0px 15px /*added*/0px /*added*/30px;
+  padding: /*added*/0px 15px /*added*/0px /*added*/40px;
+  
   /*margin-bottom: 10px;*/
   /*background: #ffffff;*/
   /*border: 1px solid #dddddd;*/
